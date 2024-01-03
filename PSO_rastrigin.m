@@ -26,8 +26,8 @@ for n = 1:50
     fitness_CPSOS = zeros(100, 1);
 
     for i = 1:10
-        fitness_SPSO = fitness_SPSO + partcles_SPSO(:, i) .^ 2 - 10 * cos(2 * pi * partcles_SPSO(:, i));
-        fitness_CPSOS = fitness_CPSOS + partcles_CPSOS(:, i) .^ 2 - 10 * cos(2 * pi * partcles_CPSOS(:, i));
+        fitness_SPSO = fitness_SPSO + partcles_SPSO(:, i) .^ 2 - 10 * cos(2 * pi * partcles_SPSO(:, i)) + 10;
+        fitness_CPSOS = fitness_CPSOS + partcles_CPSOS(:, i) .^ 2 - 10 * cos(2 * pi * partcles_CPSOS(:, i)) + 10;
     end
 
     % Initialize the best position of each particle
@@ -84,8 +84,8 @@ for n = 1:50
         fitness_CPSOS = zeros(100, 1);
 
         for j = 1:10
-            fitness_SPSO = fitness_SPSO + partcles_SPSO(:, j) .^ 2 - 10 * cos(2 * pi * partcles_SPSO(:, j));
-            fitness_CPSOS = fitness_CPSOS + partcles_CPSOS(:, j) .^ 2 - 10 * cos(2 * pi * partcles_CPSOS(:, j));
+            fitness_SPSO = fitness_SPSO + partcles_SPSO(:, j) .^ 2 - 10 * cos(2 * pi * partcles_SPSO(:, j)) + 10;
+            fitness_CPSOS = fitness_CPSOS + partcles_CPSOS(:, j) .^ 2 - 10 * cos(2 * pi * partcles_CPSOS(:, j)) + 10;
         end
 
         % Update the best position of each particle
